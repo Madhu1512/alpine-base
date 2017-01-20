@@ -4,8 +4,8 @@ FROM alpine:latest
 RUN apk update && \
     apk upgrade && \
     apk add bash curl openjdk8 openssl \
-            unzip zip ca-certificates nodejs \
-            cmake go git mercurial tar python3 && \
+            zip ca-certificates nodejs \
+            cmake go git mercurial tar python3 maven && \
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
     pip3 install --upgrade pip setuptools && \
