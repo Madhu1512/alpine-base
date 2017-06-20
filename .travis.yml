@@ -1,0 +1,11 @@
+---
+sudo: required
+services:
+- docker
+branches:
+  only:
+  - master
+  
+script:
+- docker build -t madhu1512/alpine-base:latest .
+- docker run madhu1512/alpine-base:latest python --version
